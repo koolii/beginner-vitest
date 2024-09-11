@@ -1,11 +1,11 @@
 import { describe, expect, it, vi } from "vitest";
 
-import * as Fetchers from "../../fetchers";
+import * as Fetchers from "../fetchers";
 import { getGreet } from "./fetchers";
 
 vi.mock("../../fetchers");
 
-describe("vi.spyOn()で関数をスタブ化する", () => {
+describe("vi.spyOn()で関数をスタブ化する(Web API レスポンスが固定の、スタブを使用したテスト手法)", () => {
   it("データ取得成功時 => vi.spyOn().mockResolvedValueOnce()", async () => {
     // vi.mock()とは違うスタブ実装方法
     let spy = vi.spyOn(Fetchers, "getMyProfile").mockResolvedValueOnce({

@@ -1,4 +1,4 @@
-import { getMyProfile } from "../../fetchers";
+import { getMyProfile } from "../fetchers";
 
 export async function getGreet() {
   const { name } = await getMyProfile();
