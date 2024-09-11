@@ -4,7 +4,7 @@ export const httpError: HttpError = {
   err: { message: "internal server error" },
 };
 
-export const getMyArticlesData: Articles = {
+export const getMyArticlesData = (): Articles => ({
   articles: [
     {
       id: "howto-testing-with-typescript",
@@ -28,7 +28,7 @@ export const getMyArticlesData: Articles = {
       body: "Jest は単体テストとして、UIコンポーネントのテストが可能です…",
     },
   ],
-};
+});
 
 export const postMyArticleData: Article = {
   id: "xxxxxxx-123456",
